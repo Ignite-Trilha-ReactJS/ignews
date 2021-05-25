@@ -1,6 +1,10 @@
 import styles from './styles.module.scss';
 
-const SubscribeButton: React.FC = () => {
+interface ISubscribeButton {
+  priceId: string;
+}
+
+const SubscribeButton: React.FC<ISubscribeButton> = ({ priceId }: ISubscribeButton) => {
   return (
     <button type="button" className={styles.subscribeButton}>
       Subscribe Now</button>
