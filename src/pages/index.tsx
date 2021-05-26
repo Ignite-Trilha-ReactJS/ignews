@@ -23,7 +23,7 @@ export default function Home({ product }: IHome) {
       <main className={styles.contentContainer}>
         <section className={styles.hero}>
           <span>👏 Hey, welcome</span>
-          <h1>News abou the <span>React</span> world.</h1>
+          <h1>News about the <span>React</span> world.</h1>
 
           <p>
             Get acess to all the publications <br />
