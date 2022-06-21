@@ -7,7 +7,7 @@ import { getStripeJs } from '../../services/stripe-js';
 import { useRouter } from 'next/dist/client/router';
 
 interface ISubscribeButton {
-  priceId: string;
+  priceId?: string;
 }
 
 const SubscribeButton: React.FC<ISubscribeButton> = ({ priceId }: ISubscribeButton) => {
