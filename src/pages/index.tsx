@@ -9,7 +9,7 @@ import SubscribeButton from "../Components/SubscribeButton";
 interface IHome {
   product: {
     priceId: string;
-    amout: number;
+    amount: string;
   }
 }
 
@@ -27,7 +27,7 @@ export default function Home({ product }: IHome) {
 
           <p>
             Get acess to all the publications <br />
-            for <span>{product.amout}</span> month
+            for <span>{product.amount}</span> month
           </p>
 
           <SubscribeButton priceId={product.priceId} />
@@ -47,7 +47,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const product = {
     priceId: price.id,
-    amout: new Intl.NumberFormat('en-US', {
+    amount: new Intl.NumberFormat('en-US', {
       style: "currency",
       currency: "USD"
     }).format(price.unit_amount / 100)
